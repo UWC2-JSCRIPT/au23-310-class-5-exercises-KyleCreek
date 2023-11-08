@@ -2,13 +2,19 @@
 // When a user clicks the – element, the count should decrease by 1 on screen.
 let counter = 0;
 
-const plusEl = document.getElementById("Plus");
+const plusEl = document.getElementById("plus");
 const minusEl = document.getElementById("minus");
+const count = document.getElementById("count");
+count.innerText = counter;
 
-function IncrementDecrement(inc) {
-}
+// Add the Event Listener to plusEl
+plusEl.addEventListener('click', () => {
+		counter++;
+		count.innerText = counter;
+});
 
-
-
-plusEl.addEventListener("click", incrementDecrement(true));
-minusEl.addEventListener("click", incrementDecrement(false));
+// Add the Event Listener to MinusEl 
+minusEl.addEventListener('click', () => {
+	counter--;
+	count.innerText = counter;
+});
