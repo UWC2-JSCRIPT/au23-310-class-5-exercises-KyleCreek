@@ -3,7 +3,7 @@
 // Access via ID;
 const h2Id = document.getElementById("weather-head");
 h2Id.innerText = 'February 10 Weather Forecast, Seattle';
-console.log(h2Id);
+
 // Change the styling of every element with class "sun" to set the color to "orange"
 
 // Collect an Array or Elements;
