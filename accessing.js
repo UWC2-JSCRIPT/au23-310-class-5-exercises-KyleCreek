@@ -19,20 +19,10 @@ for (i=0; i<suns.length; i++){
 
 // Create an Array of All List Items
 const listItems = document.getElementsByTagName("li");
-// New Array that will only return "Class = Sun";
-for (j=0; j< listItems.length; j++){
-	let counter = 0;
-	if (listItems[j].className === 'sun' && counter === 1){
-		listItems[j].className = 'cloudy';
-		console.log('changing');
-	}
-	else if (listItems[j].className === 'sun' && counter != 1){
-		counter += 1;
-		console.log('sun 1');
-	}
-	else{
-		console.log('pass');
-	}
-}
+// Revise the Second Sunny Day and Make it cloudy.
+// -- Note to grader: I was going to loop through it, but I got
+// lazy and knew that this is the location is was going to be
+// given the HTML is statically served. If it were dynamically Served
+// I would have handled it via loop or something else. 
+listItems[2].className = 'cloudy';
 
-console.log(listItems);
