@@ -6,7 +6,9 @@ newElement.appendChild(newElementTextNode);
 newElement.id = 'cta';
 
 // -- Go Do: Insert the Element after the Last P. 
+// The current will put this on the chart but I need to Place it. 
 document.body.appendChild(newElement);
+
 
 // Access (read) the data-color attribute of the <img>,
 // log to the console
