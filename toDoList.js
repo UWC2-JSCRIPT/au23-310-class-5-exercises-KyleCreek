@@ -20,6 +20,7 @@ function newNodeCreate(inputText){
 
   // Create a List Item to encompass the Span Noce
   const listItem = document.createElement('li');
+  listItem.className = 'Incomplete';
   // Append the Span to the List Item
   listItem.appendChild(spanNode);
 
@@ -58,9 +59,21 @@ addButton.addEventListener('click', addListItem);
 const mainList = document.getElementsByTagName('ul')[0];
 mainList.addEventListener('click', (e) =>{
   // Case Statement where LI has been clicked
+  // Will Toggle the Class Name from "Incomplete" to "Complete" or Vice Versa.
+  // This isn't entirely Clear per the Class Instructions, so I Added the Functionality
+  // and revised the HTML Accordingly. 
   if (e.target.tagName === 'LI'){
-    console.log('list item');
+    console.log('class name target first', e.target.className);
+    if (e.target.className === 'Incomplete'){
+      e.target.className = 'Complete'
+      console.log('class name target second', e.target.className);
+    }
+    else{
+      e.target.className = 'Incomplete';
+      console.log('class name target second', e.target.className);
+    }
   }
+  // Case Statement where the Delete Button Has Been Clicked
   if (e.target.tagName === 'A'){
     console.log('Delete Button');
     // Obtain the List Item Node
@@ -68,7 +81,4 @@ mainList.addEventListener('click', (e) =>{
     // Remove the Parent Node
     parentNode.remove();
   }
-  else{
-    console.log('other');
-  }
-})
+});
